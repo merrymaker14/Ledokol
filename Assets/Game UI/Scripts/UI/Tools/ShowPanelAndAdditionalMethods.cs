@@ -11,7 +11,6 @@ public class ShowPanelAndAdditionalMethods : MonoBehaviour {
 		Panel.gameObject.SetActive (false);
 		if (AdditionalPanel != null)
 			AdditionalPanel.gameObject.SetActive (false);
-		GameObject Background = GameObject.Find ("Background");
 	}
 
 	public void showPanel() {
