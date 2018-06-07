@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using LedokolUI;
 
 namespace LedokolUI
 {
@@ -13,7 +14,7 @@ namespace LedokolUI
             comic.gameObject.SetActive(false);
         }
 
-        public void startComic()
+        void startComic()
         {
             GameObject.Find("ComicButton").gameObject.SetActive(false);
             GameObject.Find("CloseButton").gameObject.SetActive(false);

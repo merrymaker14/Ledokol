@@ -8,39 +8,46 @@ namespace LedokolUI
     public class ShowPanelAndAdditionalMethods : MonoBehaviour
     {
         public GameObject Panel, AdditionalPanel;
+        [Header("Modal button (for comic):")]
         public Button modalButton;
 
         void Start()
         {
-            Panel.gameObject.SetActive(false);
+            if (Panel != null)
+                Panel.gameObject.SetActive(false);
             if (AdditionalPanel != null)
                 AdditionalPanel.gameObject.SetActive(false);
         }
 
-        public void showPanel()
+        void showPanel()
         {
             if (AdditionalPanel != null)
                 AdditionalPanel.gameObject.SetActive(false);
             Panel.gameObject.SetActive(true);
         }
 
-        public void showAdditionalPanel()
+        void showAdditionalPanel()
         {
             Panel.gameObject.SetActive(false);
             AdditionalPanel.gameObject.SetActive(true);
         }
 
-        public void closeStoreButton()
+        void showModalButton()
+        {
+            modalButton.gameObject.SetActive(true);
+        }
+
+        void closeStoreButton()
         {
             GameObject.Find("StoreButton").gameObject.SetActive(false);
         }
 
-        public void closeModalButton()
+        void closeModalButton()
         {
             modalButton.gameObject.SetActive(false);
         }
 
-        public void closeModal()
+        void closeModal()
         {
             Panel.gameObject.SetActive(false);
             modalButton.gameObject.SetActive(true);
