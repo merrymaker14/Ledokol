@@ -12,13 +12,13 @@ namespace LedokolUI
 
         public List<Item> itemList;
 
-        private GameObject detailsTransform;
-        private GameObject details;
+        private GameObject _detailsTransform;
+        private GameObject _details;
 
         private void Awake()
         {
-            detailsTransform = GameObject.Find("Panel for items");
-            details = detailsTransform.transform.Find("Details").gameObject;
+            _detailsTransform = GameObject.Find("Panel for items");
+            _details = detailsTransform.transform.Find("Details").gameObject;
         }
 
         void Start()
@@ -55,16 +55,16 @@ namespace LedokolUI
 
         private void ShowDetails(string name, Sprite picture, string description, string detailBaseValue)
         {
-            details.transform.Find("detailName").GetComponent<Text>().text = name;
-            details.transform.Find("detailPicture").GetComponent<Image>().sprite = picture;
-            details.transform.Find("detailDescription").GetComponent<Text>().text = description;
-            details.transform.Find("detailBaseValue").GetComponent<Text>().text = detailBaseValue;
-            details.gameObject.SetActive(true);
+            _details.transform.Find("detailName").GetComponent<Text>().text = name;
+            _details.transform.Find("detailPicture").GetComponent<Image>().sprite = picture;
+            _details.transform.Find("detailDescription").GetComponent<Text>().text = description;
+            _details.transform.Find("detailBaseValue").GetComponent<Text>().text = detailBaseValue;
+            _details.gameObject.SetActive(true);
         }
 
         public void CloseDetails()
         {
-            details.gameObject.SetActive(false);
+            _details.gameObject.SetActive(false);
         }
     }
 }
