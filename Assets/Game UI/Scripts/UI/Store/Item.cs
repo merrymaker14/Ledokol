@@ -8,6 +8,7 @@ namespace LedokolUI
     public class Item : ScriptableObject
     {
         public new string name;
+        [TextArea]
         public string description;
         public Sprite picture;
         public int baseValue;

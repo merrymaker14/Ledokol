@@ -11,7 +11,7 @@ namespace LedokolUI
         [Header("Modal button (for comic):")]
         public Button modalButton;
 
-        void Start()
+        void Awake()
         {
             if (Panel != null)
                 Panel.gameObject.SetActive(false);
@@ -19,35 +19,40 @@ namespace LedokolUI
                 AdditionalPanel.gameObject.SetActive(false);
         }
 
-        void showPanel()
+        void Start()
+        {
+
+        }
+
+        public void ShowPanel()
         {
             if (AdditionalPanel != null)
                 AdditionalPanel.gameObject.SetActive(false);
             Panel.gameObject.SetActive(true);
         }
 
-        void showAdditionalPanel()
+        public void ShowAdditionalPanel()
         {
             Panel.gameObject.SetActive(false);
             AdditionalPanel.gameObject.SetActive(true);
         }
 
-        void showModalButton()
+        public void ShowModalButton()
         {
             modalButton.gameObject.SetActive(true);
         }
 
-        void closeStoreButton()
+        public void CloseStoreButton()
         {
             GameObject.Find("StoreButton").gameObject.SetActive(false);
         }
 
-        void closeModalButton()
+        public void CloseModalButton()
         {
             modalButton.gameObject.SetActive(false);
         }
 
-        void closeModal()
+        public void CloseModal()
         {
             Panel.gameObject.SetActive(false);
             modalButton.gameObject.SetActive(true);

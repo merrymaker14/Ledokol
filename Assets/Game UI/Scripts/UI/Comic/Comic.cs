@@ -5,16 +5,21 @@ using LedokolUI;
 
 namespace LedokolUI
 {
-    public class StartComic : MonoBehaviour
+    public class Comic : MonoBehaviour
     {
         public GameObject comic;
 
-        void Start()
+        void Awake()
         {
             comic.gameObject.SetActive(false);
         }
 
-        void startComic()
+        void Start()
+        {
+
+        }
+
+        public void StartComic()
         {
             GameObject.Find("ComicButton").gameObject.SetActive(false);
             GameObject.Find("CloseButton").gameObject.SetActive(false);
