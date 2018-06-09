@@ -18,7 +18,7 @@ namespace LedokolUI
         private void Awake()
         {
             _detailsTransform = GameObject.Find("Panel for items");
-            _details = detailsTransform.transform.Find("Details").gameObject;
+            _details = _detailsTransform.transform.Find("Details").gameObject;
         }
 
         void Start()
